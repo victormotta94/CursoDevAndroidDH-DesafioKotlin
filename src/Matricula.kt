@@ -5,8 +5,11 @@ class Matricula(
     val curso: Curso?,
     val data: LocalDateTime
 ) {
- fun matricular(aluno: Aluno?, curso: Curso?, data: LocalDateTime): String {
-     curso?.adicionarAluno(aluno)
-     return ("$aluno matriculado no curso $curso na data $data")
- }
+    fun matricular(aluno: Aluno?, curso: Curso?, data: LocalDateTime) {
+        curso?.adicionarAluno(aluno)
+    }
+
+    override fun toString(): String {
+        return ("$aluno matriculado no curso $curso na data $data")
+    }
 }

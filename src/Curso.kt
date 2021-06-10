@@ -1,4 +1,4 @@
-open class Curso
+class Curso
     (
     var nome: String,
     var codigoDeCurso: Int,
@@ -8,9 +8,9 @@ open class Curso
     var listaAlunos: MutableList<Aluno?> = mutableListOf()
 ) {
 
-    open fun adicionarAluno(aluno: Aluno?): Boolean {
+    fun adicionarAluno(aluno: Aluno?): Boolean {
 
-        var qtd = qtdAlunos
+        val qtd = qtdAlunos
 
         return if (qtd > listaAlunos.size) {
             listaAlunos.add(aluno)
@@ -18,7 +18,7 @@ open class Curso
             return false
     }
 
-    open fun excluirAluno(aluno: Aluno?){
+    fun excluirAluno(aluno: Aluno?){
         listaAlunos.remove(aluno)
     }
 

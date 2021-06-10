@@ -1,10 +1,10 @@
 fun main() {
-    var adm = DigitalHouseManager(mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf())
+    val adm = DigitalHouseManager(mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf())
 
-    adm.registrarProfessorAdjunto("Ricardo", "Ramalho", 1, 10)
-    adm.registrarProfessorAdjunto("Eduardo", "Ramalho", 2, 5)
-    adm.registrarProfessorTitular("Vinicius", "Padovan", 3, "Backend")
-    adm.registrarProfessorTitular("Victor", "Motta", 4, "Kotlin")
+    adm.registrarProfessorAdjunto("Mark", "Zuckerberg", 1, 10)
+    adm.registrarProfessorAdjunto("Eduardo", "Misina", 2, 5)
+    adm.registrarProfessorTitular("Bill", "Gates", 3, "Backend")
+    adm.registrarProfessorTitular("Cesar", "Rodrigues", 4, "Kotlin")
     adm.registrarCurso("FullStack", 20001, 3)
     adm.registrarCurso("Android", 20002, 2)
     adm.registrarAluno("Pedro", "Bó", 1)
@@ -22,6 +22,10 @@ fun main() {
     adm.matricularAluno(5, 20002)
 
     adm.imprimirCursos()
+    adm.imprimirProfessores()
+    adm.imprimirMatriculas()
+
+
 
 
 
