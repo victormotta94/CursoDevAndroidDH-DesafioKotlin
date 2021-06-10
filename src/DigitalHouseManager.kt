@@ -4,7 +4,7 @@ open class DigitalHouseManager(
     var listaAlunos: MutableList<Aluno> = mutableListOf(),
     var listaProfessores: MutableList<Professor> = mutableListOf(),
     var listaCursos: MutableList<Curso> = mutableListOf(),
-    var listaMatriculas: MutableList<Matricula> = mutableListOf()
+    open var listaMatriculas: MutableList<Matricula> = mutableListOf()
 ) {
 
     /////* FUNÇÕES DE CURSO */////

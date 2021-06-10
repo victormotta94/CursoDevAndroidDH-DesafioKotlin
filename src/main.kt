@@ -1,5 +1,6 @@
 fun main() {
     val adm = DigitalHouseManager(mutableListOf(), mutableListOf(), mutableListOf(), mutableListOf())
+    val alunoConsulta = Aluno("testando", "teste", 7)
 
     adm.registrarProfessorAdjunto("Mark", "Zuckerberg", 1, 10)
     adm.registrarProfessorAdjunto("Eduardo", "Misina", 2, 5)
@@ -12,6 +13,7 @@ fun main() {
     adm.registrarAluno("Mané", "Campos", 3)
     adm.registrarAluno("Julia", "Oliveira", 4)
     adm.registrarAluno("Paula", "Silva", 5)
+    adm.registrarAluno(alunoConsulta.nome, alunoConsulta.sobrenome, alunoConsulta.codigoDeAluno)
 
     adm.alocarProfessor(20001,3, 1)
     adm.alocarProfessor(20002, 4, 2)
@@ -20,10 +22,13 @@ fun main() {
     adm.matricularAluno(3, 20002)
     adm.matricularAluno(4, 20002)
     adm.matricularAluno(5, 20002)
+    adm.matricularAluno(7, 20001)
 
     adm.imprimirCursos()
     adm.imprimirProfessores()
     adm.imprimirMatriculas()
+
+    alunoConsulta.consultarMatricula(7, adm)
 
 
 
